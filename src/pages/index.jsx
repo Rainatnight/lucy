@@ -37,7 +37,7 @@ export default function Home() {
         <title>For Lucinka</title>
 
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/heart.svg" />
+        <link rel="icon" href="heart.svg" />
       </Head>
       <div
         className={`${styles.page} ${geistSans.variable} ${geistMono.variable}`}
@@ -67,35 +67,35 @@ export default function Home() {
           {num === 1 && (
             <div className={styles.wrap}>
               <h3>Gypsies</h3>
-              <img src="/imgs/gypsies.jpg" />
+              <img src="imgs/gypsies.jpg" />
             </div>
           )}
 
           {num === 2 && (
             <div className={styles.wrap}>
               <h3>Fat lesbians</h3>
-              <img src="/imgs/lesbians.jpg" />
+              <img src="imgs/lesbians.jpg" />
             </div>
           )}
 
           {num === 3 && (
             <div className={styles.wrap}>
               <h3>French people</h3>
-              <img src="/imgs/french.jpg" />
+              <img src="imgs/french.jpg" />
             </div>
           )}
 
           {num === 4 && (
             <div className={styles.wrap}>
               <h3>Junkie</h3>
-              <img src="/imgs/junkie.jpg" />
+              <img src="imgs/junkie.jpg" />
             </div>
           )}
 
           {num === 5 && (
             <div className={styles.wrap}>
               <h3>But not a pookie san</h3>
-              <img src="/imgs/pookie.jpg" />
+              <img src="imgs/pookie.jpg" />
             </div>
           )}
 
