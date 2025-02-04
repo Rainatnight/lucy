@@ -1,0 +1,198 @@
+@media (prefers-color-scheme: dark) {
+  .page {
+    --gray-rgb: 255, 255, 255;
+    --gray-alpha-200: rgba(var(--gray-rgb), 0.145);
+    --gray-alpha-100: rgba(var(--gray-rgb), 0.06);
+    background-color: pink;
+    --button-primary-hover: #ccc;
+    --button-secondary-hover: #1a1a1a;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.main {
+  padding: 20px;
+  position: relative;
+  width: 80%;
+  height: 100vh;
+  background-color: pink;
+  display: flex;
+  flex-direction: column;
+}
+.main > h1 {
+  font-family: "Dela Gothic One", serif;
+  font-weight: 400;
+  font-style: normal;
+  margin-top: 10%;
+  color: black;
+  font-size: 48px;
+  line-height: 56px;
+  text-align: center;
+  font-weight: bold;
+
+  background: linear-gradient(45deg, #fa89f1, #fd6dea, #5e0156); /* Градиент */
+  -webkit-background-clip: text; /* Делаем градиент только для текста */
+  -webkit-text-fill-color: transparent; /* Скрываем цвет текста */
+}
+
+.main > h2 {
+  font-family: "Dela Gothic One", serif;
+  font-weight: 400;
+  font-style: normal;
+  text-align: center;
+  margin-top: 25px;
+  color: black;
+  line-height: 56px;
+  font-size: 48px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.wrap {
+  z-index: 2;
+  text-align: center;
+  margin-top: 20px;
+  color: black;
+  line-height: 56px;
+  font-size: 48px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.wrap img {
+  margin-top: 20px;
+  width: 350px; /* Размер круга */
+  height: 350px; /* Делаем квадрат для круга */
+  border-radius: 50%; /* Делаем картинку круглой */
+  object-fit: cover; /* Заполняем круг, обрезая края */
+  border: 3px solid #ffa787; /* Оранжевая обводка, как в Instagram */
+  padding: 2px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Легкая тень */
+}
+.wrap > h3 {
+  font-family: "Dela Gothic One", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.btn {
+  margin-top: 30px;
+  align-self: center;
+  cursor: pointer;
+  width: fit-content;
+  background-color: #ff7f7f; /* Розоватый оттенок */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 8px; /* Скругленные углы */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Тень */
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn:hover {
+  background-color: #ff4c4c; /* Более темный розовый оттенок при наведении */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Увеличенная тень при наведении */
+  transform: translateY(-4px); /* Эффект при наведении */
+}
+
+.btn:active {
+  background-color: #ff1a1a; /* Еще более темный розовый при нажатии */
+  transform: translateY(2px); /* Эффект нажатия */
+}
+
+@keyframes floating-hearts {
+  0% {
+    transform: translateY(100vh) scale(0.8);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0) scale(1.2);
+    opacity: 0.5;
+  }
+}
+
+.container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.heart {
+  z-index: 1;
+  position: absolute;
+  top: 10vh;
+  font-size: 48px;
+  color: red; /* Сделаем красными для видимости */
+  animation: floating-hearts 5s linear infinite;
+}
+
+/* Рандомные позиции и скорости */
+.heart:nth-child(1) {
+  left: 10%;
+  animation-duration: 4s;
+}
+.heart:nth-child(2) {
+  left: 20%;
+  animation-duration: 6s;
+  font-size: 30px;
+}
+.heart:nth-child(3) {
+  left: 30%;
+  animation-duration: 5s;
+  font-size: 22px;
+}
+.heart:nth-child(4) {
+  left: 40%;
+  animation-duration: 7s;
+  font-size: 28px;
+}
+.heart:nth-child(5) {
+  left: 50%;
+  animation-duration: 6.5s;
+  font-size: 26px;
+}
+.heart:nth-child(6) {
+  left: 60%;
+  animation-duration: 5.5s;
+  font-size: 24px;
+}
+.heart:nth-child(7) {
+  left: 70%;
+  animation-duration: 4.5s;
+  font-size: 32px;
+}
+.heart:nth-child(8) {
+  left: 80%;
+  animation-duration: 7.5s;
+  font-size: 20px;
+}
+.heart:nth-child(9) {
+  left: 90%;
+  animation-duration: 6s;
+  font-size: 27px;
+}
+
+@media (max-width: 768px) {
+  .main > h1 {
+    font-size: 32px;
+    line-height: 40px;
+    margin-top: 5%;
+  }
+  .main > h2 {
+    font-size: 32px;
+    line-height: 40px;
+    margin-top: 5%;
+  }
+}
