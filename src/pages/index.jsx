@@ -2,7 +2,7 @@ import Head from "next/head";
 import { Geist, Geist_Mono } from "next/font/google";
 import styles from "@/styles/Home.module.css";
 import { useState } from "react";
-
+import ReactCompareImage from "react-compare-image";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -26,7 +26,11 @@ const pages = [
 
 export default function Home() {
   const [num, setNum] = useState(0);
-  console.log(num);
+  const [sliderPosition, setSliderPosition] = useState(50);
+
+  const handleSliderChange = (e) => {
+    setSliderPosition(e.target.value);
+  };
 
   const handleClick = () => {
     setNum((prev) => (prev + 1) % pages.length);
@@ -94,10 +98,15 @@ export default function Home() {
           )}
 
           {num === 5 && (
-            <div className={styles.wrap}>
-              <h3>But not a pookie san</h3>
-              <img src="imgs/pookie.jpg" />
-            </div>
+            <>
+              <h3 className={styles.pookie}>But not a pookie san</h3>
+              <div className={styles.contentWrapper}>
+                <ReactCompareImage
+                  leftImage="imgs/1.jpg"
+                  rightImage="imgs/2.jpg"
+                />
+              </div>
+            </>
           )}
 
           {num === 6 && (
