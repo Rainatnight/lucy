@@ -21,6 +21,7 @@ const pages = [
   "junky",
   "pookie",
   "miss",
+  "comp",
 ];
 
 export default function Home() {
@@ -44,15 +45,15 @@ export default function Home() {
       >
         <main className={styles.main}>
           <div class={styles.container}>
-            <span class={styles.heart}>❤️</span>
-            <span class={styles.heart}>💖</span>
-            <span class={styles.heart}>💗</span>
-            <span class={styles.heart}>💕</span>
-            <span class={styles.heart}>💞</span>
-            <span class={styles.heart}>💘</span>
-            <span class={styles.heart}>💝</span>
-            <span class={styles.heart}>💟</span>
-            <span class={styles.heart}>❣️</span>
+            <span class={styles.heart}>{num !== 4 ? "❤️" : "💩"}</span>
+            <span class={styles.heart}>{num !== 4 ? "💖" : "💩"}</span>
+            <span class={styles.heart}>{num !== 4 ? "💗" : "💩"}</span>
+            <span class={styles.heart}>{num !== 4 ? "💕" : "💩"}</span>
+            <span class={styles.heart}>{num !== 4 ? "💞" : "💩"}</span>
+            <span class={styles.heart}>{num !== 4 ? "💘" : "💩"}</span>
+            <span class={styles.heart}>{num !== 4 ? "💝" : "💩"}</span>
+            <span class={styles.heart}>{num !== 4 ? "💟" : "💩"}</span>
+            <span class={styles.heart}>{num !== 4 ? "❣️" : "💩"}</span>
           </div>
           {num === 0 && (
             <>
@@ -100,6 +101,24 @@ export default function Home() {
           )}
 
           {num === 6 && (
+            <div className={styles.wrap}>
+              <h3>Leo and Aries</h3>
+              <div className={styles.zodiac}>
+                <img src="imgs/leo.jpg" />
+                <img src="imgs/aries.jpg" />
+              </div>
+              <h3 className={styles.zodiach3}>
+                Know that Aries and Leo are two fire signs that are highly
+                compatible. Yes, they are prone to dramatics, but each will be
+                amused by the other's antics — Aries' temper and Leo's
+                performances. Aries appreciates Leo's confidence and Leo
+                appreciates Leo's assertiveness.
+              </h3>
+              <h4 className={styles.h4}>I am legit a beran by zodiac...</h4>
+            </div>
+          )}
+
+          {num === 7 && (
             <div className={styles.wrap}>
               <h3>Miss u :(</h3>
             </div>
